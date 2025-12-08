@@ -1,0 +1,153 @@
+import { Product } from '@/types/product';
+
+export const PRODUCTS: Product[] = [
+  {
+    id: '1',
+    name: 'Classic Cotton T-Shirt',
+    price: 29.99,
+    originalPrice: 39.99,
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80',
+    category: 'men',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: ['White', 'Black', 'Navy', 'Gray'],
+    description: 'Premium quality cotton t-shirt with a comfortable fit. Perfect for everyday wear.',
+    featured: true,
+  },
+  {
+    id: '2',
+    name: 'Slim Fit Denim Jeans',
+    price: 79.99,
+    image: 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=800&q=80',
+    category: 'men',
+    sizes: ['28', '30', '32', '34', '36'],
+    colors: ['Blue', 'Black', 'Gray'],
+    description: 'Modern slim fit jeans with stretch denim for ultimate comfort and style.',
+    featured: true,
+  },
+  {
+    id: '3',
+    name: 'Summer Floral Dress',
+    price: 59.99,
+    originalPrice: 79.99,
+    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800&q=80',
+    category: 'women',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    colors: ['Floral Blue', 'Floral Pink', 'Floral Yellow'],
+    description: 'Light and breezy summer dress with beautiful floral patterns.',
+    featured: true,
+  },
+  {
+    id: '4',
+    name: 'Elegant Blouse',
+    price: 49.99,
+    image: 'https://images.unsplash.com/photo-1564257577124-832b89f0661f?w=800&q=80',
+    category: 'women',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    colors: ['White', 'Cream', 'Black', 'Pink'],
+    description: 'Sophisticated blouse perfect for office or evening occasions.',
+    featured: false,
+  },
+  {
+    id: '5',
+    name: 'Kids Graphic Tee',
+    price: 19.99,
+    image: 'https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=800&q=80',
+    category: 'kids',
+    sizes: ['2T', '3T', '4T', '5T', '6T'],
+    colors: ['Red', 'Blue', 'Yellow', 'Green'],
+    description: 'Fun and colorful graphic t-shirt for active kids.',
+    featured: true,
+  },
+  {
+    id: '6',
+    name: 'Casual Hoodie',
+    price: 44.99,
+    originalPrice: 59.99,
+    image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80',
+    category: 'men',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: ['Gray', 'Black', 'Navy', 'Burgundy'],
+    description: 'Cozy hoodie made from soft fleece material. Perfect for layering.',
+    featured: false,
+  },
+  {
+    id: '7',
+    name: 'High-Waist Jeans',
+    price: 69.99,
+    image: 'https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?w=800&q=80',
+    category: 'women',
+    sizes: ['24', '26', '28', '30', '32'],
+    colors: ['Light Blue', 'Dark Blue', 'Black'],
+    description: 'Trendy high-waist jeans with a flattering fit.',
+    featured: false,
+  },
+  {
+    id: '8',
+    name: 'Kids Denim Jacket',
+    price: 39.99,
+    image: 'https://images.unsplash.com/photo-1547997034-d1de6fa2ed6a?w=800&q=80',
+    category: 'kids',
+    sizes: ['2T', '3T', '4T', '5T', '6T', '8T'],
+    colors: ['Light Blue', 'Dark Blue'],
+    description: 'Classic denim jacket for kids. Durable and stylish.',
+    featured: false,
+  },
+  {
+    id: '9',
+    name: 'Formal Shirt',
+    price: 54.99,
+    image: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&q=80',
+    category: 'men',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: ['White', 'Light Blue', 'Pink', 'Black'],
+    description: 'Premium formal shirt for business and formal occasions.',
+    featured: false,
+  },
+  {
+    id: '10',
+    name: 'Yoga Leggings',
+    price: 39.99,
+    image: 'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=800&q=80',
+    category: 'women',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    colors: ['Black', 'Navy', 'Purple', 'Gray'],
+    description: 'High-performance leggings with moisture-wicking fabric.',
+    featured: false,
+  },
+  {
+    id: '11',
+    name: 'Kids Sweatpants',
+    price: 24.99,
+    image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&q=80',
+    category: 'kids',
+    sizes: ['2T', '3T', '4T', '5T', '6T', '8T'],
+    colors: ['Gray', 'Black', 'Navy'],
+    description: 'Comfortable sweatpants for play and leisure.',
+    featured: false,
+  },
+  {
+    id: '12',
+    name: 'Leather Jacket',
+    price: 199.99,
+    originalPrice: 249.99,
+    image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80',
+    category: 'men',
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['Black', 'Brown'],
+    description: 'Premium leather jacket with timeless style.',
+    featured: true,
+  },
+];
+
+export const getProductById = (id: string): Product | undefined => {
+  return PRODUCTS.find(p => p.id === id);
+};
+
+export const getProductsByCategory = (category: string): Product[] => {
+  if (category === 'all') return PRODUCTS;
+  return PRODUCTS.filter(p => p.category === category);
+};
+
+export const getFeaturedProducts = (): Product[] => {
+  return PRODUCTS.filter(p => p.featured);
+};
